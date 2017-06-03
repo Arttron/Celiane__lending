@@ -1,16 +1,21 @@
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext');
 
 .wrapper{
-   width: 90vw;
+   width: 100vw;
+   max-width: 1350px;
+   min-width: 960px;
    margin: 0 auto;
    position: relative;
    z-index: 0;
+   font-family: 'Roboto', sans-serif;
+   color: #292929;
+   font-size: 0.9rem;
 }
 
 .head{
    width: 100%;
    &__top{
-      height: 100px;
+      height: 70px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -22,8 +27,8 @@
 .logo{
    &__img{
       box-sizing: border-box;
-      height: 100px;
-      padding: 16px 0;
+      height: 60px;
+      padding: 5px 0;
    }
 }
 .menu{
@@ -36,6 +41,7 @@
    &__link{
       color: #aaaaaa;
       text-decoration: none;
+      font-size: 1.2rem;
       padding-bottom: 10px;
       &:hover{
          border-bottom: 5px solid #3aa8c8;
@@ -47,11 +53,17 @@
 
 .promo-img{
    position: relative;
-
+   background-image: url("../img/header_bg.jpg");
+   background-size: cover;
+   background-position: center;
+   width: 100vw;
+   max-width: 1350px;
+   height: 100vh;
+   overflow: hidden;
 
    &__text{
       position: absolute;
-      height: 200px;
+      height: 175px;
       flex-direction: column;
       display: flex;
       align-items: flex-start;
@@ -60,16 +72,256 @@
 
    }
    &__text-item{
+      position: relative;
       padding-left: 65px;
       padding-right: 40px;
-      line-height: 55px ;
-      font-size: 30px;
+      line-height: 45px ;
+      font-size: 1.5rem;
       background-color: rgba(255, 255 , 255, .5);
+      left: -500px;
    }
    &__img {
       width: 100%;
       height: auto;
    }
+}
+
+.series{
+   width: 960px;
+   margin: 0 auto;
+
+   .seriesTab{
+      list-style: none;
+
+   }
+   .seriesTab__item{
+      display: inline-block;
+      margin-top: 10px;
+      a{
+         text-decoration: none;
+         font-weight: 600;
+         display: block;
+         font-size: 0.8rem;
+         color: #292929;
+         border-bottom: 3px solid transparent;
+         &:hover {
+            border-bottom: 3px solid #3aa8c8;
+         }
+      }
+   }
+   .series__preview-container{
+      display: flex;
+      flex-wrap: wrap-reverse;
+      flex-direction: row;
+
+   }
+   .series__preview-img{
+      width: 180px;
+      padding: 5px 15px;
+   }
+   .series__preview-text{
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+
+   }
+
+}
+.bgGrey__inner{
+   background-color: #e4e4e4;
+}
+.function{
+   &__tv{
+      background-image: url("../img/pg3/tv.png");
+      background-size: 76%;
+      float: left;
+      background-repeat: no-repeat;
+      position: relative;      height: 470px;
+      width: 870px;
+      .tv__content{
+         position: absolute;
+         left: 545px;
+         top: 17px;
+         img{
+            height: 48px;
+         }
+      }
+      &::after{
+         content: "";
+         display: block;
+         clear: both;
+      }
+   }
+   &__tv-img{
+      height: 500px;
+      float: left;
+
+   }
+   &__inner{
+      max-width: 960px;
+      margin: 0 auto 20px;
+   }
+   &__audio{
+      &-specImg{
+         width: 185px;
+         margin-top: 20px;
+      }
+      &-slotImg{
+         width: 52px;
+      }
+   }
+   &__light{
+      float: left;
+      width: 50%;
+      //height: 486px;
+      margin-top: 20px;
+      background: url("../img/pg3/light-window.png") top no-repeat;
+   }
+   .light__content{
+      &-text{
+         background-color: #ffffff;
+         display: inline-block;
+         margin-top: 200px;
+      }
+   }
+   .light__shem{
+      margin-top: 300px;
+   }
+   &__rollet{
+      .rollet__content>img{
+         width: 52px;
+      }
+   }
+}
+.charge__ipad{
+   width: 110px;
+}
+.charge__iphone{
+   width: 80px;
+}
+.charge__ipod{
+   width: 60px;
+}
+.charge__content>img{
+   width: 52px;
+}
+.charge__usb{
+  width: 52px;
+}
+.shem__item {
+   display: inline-block;
+}
+   .shem__item>p{
+      width: 157px;
+      font-size: 0.8rem;
+
+}
+.shem-light__img1{
+   width: 52px;
+   display: inline-block;
+   height: 48px;
+   overflow: hidden;
+   background-image: url("../img/pg3/light-sprite.jpg");
+   background-position: 0 0;
+}
+.shem-light__img2{
+   display: inline-block;
+   width: 52px;
+   height: 48px;
+   overflow: hidden;
+   background-image: url("../img/pg3/light-sprite.jpg");
+   background-position: 52px 0;
+}
+.shem-light__img3{
+   display: inline-block;
+   width: 52px;
+   height: 48px;
+   overflow: hidden;
+   background-image: url("../img/pg3/light-sprite.jpg");
+   background-position: 104px 0;
+}
+.shem-light__img4{
+   display: inline-block;
+   width: 52px;
+   height: 48px;
+   overflow: hidden;
+   background-image: url("../img/pg3/light-sprite.jpg");
+   background-position: 156px 0;
+}
+.shem-light__img5{
+   display: inline-block;
+   width: 52px;
+   height: 48px;
+   overflow: hidden;
+   background-image: url("../img/pg3/light-sprite.jpg");
+   background-position: 208px 0;
+}
+.shem-light__img6{
+   display: inline-block;
+   width: 52px;
+   height: 48px;
+   overflow: hidden;
+   background-image: url("../img/pg3/light-sprite.jpg");
+   background-position: 260px 0;
+}
+.shem-light__img7{
+   display: inline-block;
+   width: 52px;
+   height: 48px;
+   overflow: hidden;
+   background-image: url("../img/pg3/light-sprite.jpg");
+   background-position: 312px 0;
+}
+.shem-light__img8{
+   display: inline-block;
+   width: 52px;
+   height: 48px;
+   overflow: hidden;
+   background-image: url("../img/pg3/light-sprite.jpg");
+   background-position: 364px 0;
+}
+.clearFloat{
+   clear: both;
+}
+.contact{
+   width: 960px;
+   margin: 0 auto;
+//   display: flex;
+//   flex-direction: row;
+   &__form{
+      width: 400px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      float: left;
+      &::after{
+         content: "";
+         display: block;
+         clear: both;
+      }
+      input[type='text']{
+         width: 180px;
+
+      }
+      textarea{
+         width: 400px;
+         height: 70px;
+      }
+   }
+   svg{
+      width: 25px;
+      height: 25px;
+   }
+}
+.function__head, .contact__head,.series__head{
+   font-weight: 300;
+   font-size: 2rem;
+   padding: 20px 0;
+}
+.series__text, .function__text, .tv__text, .audio__text, .light__text, .shem-light__text, .rollet__text, .charge__text{
+   font-weight: 100;
+   font-size: 0.9rem;
+   line-height: 1rem;
 }
 .close{
    position: fixed;
