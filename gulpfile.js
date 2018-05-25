@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var connect = require('gulp-connect');
 var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').create();
 
 
 gulp.task('connect', function () {
@@ -29,9 +30,21 @@ gulp.task('livereload', function () {
 	gulp.src('./public/*.html')
 		.pipe(connect.reload());
 });
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./public"
+        },
+        open: false
+    });
+});
+gulp.task('bs-reload', function (done) {
+    browserSync.reload();
+    done();
+});
 gulp.task('sass:watch', function () {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
-	gulp.watch('./public/**/*', ['livereload']);
+	gulp.watch('./public/**/*', ['bs-reload']);
 });
 
-gulp.task('default', ['sass', 'sass:watch', 'connect']);
+gulp.task('default', ['sass', 'sass:watch', 'browser-sync']);

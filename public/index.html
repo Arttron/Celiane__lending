@@ -1,11 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/xml; charset=UTF-8" />
     <title>Celiane.com.ua</title>
-    <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    
 </head>
 <body>
 <!--<div class="close">-->
@@ -126,7 +128,7 @@
                 <!--<img class="function__tv-img" src="./img/pg3/tv.png" alt="tv image"/>-->
                     <img class="tv-img" src="./img/pg3/tv.png" alt=""/>
                 <div class="tv__content">
-                    <h3 class="tv__head">Идеальное решение для организации ТВ-зоны</h3>
+                    <h3 class="tv__head content__head">Идеальное решение для организации ТВ-зоны</h3>
 
                     <p class="tv__text">Все необходимые механизмы в одной рамке. В комплект входят:<br>
                         - розетка 220 V, с утапливаемой лицевой панелью  - 2 шт.<br>
@@ -140,7 +142,7 @@
                 <img class="function__audio-specImg" src="./img/pg3/speaker.png" alt="speaker"/>
                 <img class="function__audio-slotImg" src="./img/pg3/acoostik_block.png" alt="celiane Hi-Fi slot"/>
                 <div class="audio__content">
-                    <h3 class="audio__head">Удобное подключение акуcтических систем</h3>
+                    <h3 class="audio__head content__head">Удобное подключение акуcтических систем</h3>
                     <p class="audio__text">Акустическая розетка Celiane: соединит домашний кинотеатр
                         с Hi-Fi колонками, освободит от наружной прокладки кабеля.</p>
                 </div>
@@ -153,7 +155,7 @@
 
                 <div class="light__content">
                    <div class="light__content-text">
-                       <h3 class="light__head">Управление освещением</h3>
+                       <h3 class="light__head content__head">Управление освещением</h3>
 
                        <p class="light__text">Celiane открывает новые возможности. <br>Каждое прикосновние подобно игре жестов.
                        </p>
@@ -188,51 +190,81 @@
                     </div>
                 </div>
             </div>
+            <div class="function__container">
             <div class="function__rollet">
                 <img src="./img/pg3/rolett.png" alt="rollet control"/>
 
                 <div class="rollet__content">
-                    <h3 class="rollet__head">Управление приводами</h3>
+                    <h3 class="rollet__head content__head">Управление приводами</h3>
 
                     <p class="rollet__text">Простое управление приводами: тентов, жалюзи, рольставней, штор.</p>
                     <img src="./img/pg3/rollet_mech.png" alt="celiane rollet"/></div>
             </div>
 
             <div class="function__charge">
-                <img class="charge__ipad" src="./img/pg3/ipad.png" alt="iPad"/>
-                <img class="charge__iphone" src="./img/pg3/Iphone.png" alt="iPhone"/>
-                <img class="charge__ipod" src="./img/pg3/Ipod.png" alt="iPod"/>
-                <img class="charge__usb" src="./img/pg3/USB.png" alt="USB cabel"/>
-
-                <div class="charge__content">
-                    <h3 class="charge__head">Решения для зарядки гаджетов</h3>
-
-                    <p class="charge__text">Теперь заряжать планшеты и смартфоны стало намного удобнее.</p>
-
-                    <p class="charge__usb-text">Подставка для смартфона</p>
-                    <img src="./img/pg3/usb-socket.png" alt="celiane usb charge"/>
-
-                    <p class="charge__ps-text">Розетка 220 V USB-зарядка на 1500 мА</p>
-                    <img src="./img/pg3/phone-stand.png" alt="celiane phone stage"/></div>
-            </div>
+                    <div  class="charge__content-left">
+                        <h3 class="charge__head content__head">Решения для зарядки гаджетов</h3>
+                        <p class="charge__text">Теперь заряжать планшеты и смартфоны стало намного удобнее.</p>
+                        <div class="charge__gadget-img">
+                            <img class="charge__ipad" src="./img/pg3/ipad.png" alt="iPad"/>
+                            <img class="charge__iphone" src="./img/pg3/Iphone.png" alt="iPhone"/>
+                            <img class="charge__ipod" src="./img/pg3/Ipod.png" alt="iPod"/>
+                        </div>
+                        
+                    </div>
+                    <div class="charge__content-right">
+                        <p class="charge__usb-text">Подставка для смартфона</p>
+                        <img src="./img/pg3/usb-socket.png" alt="celiane usb charge"/>
+                        <p class="charge__ps-text">Розетка 220 V USB-зарядка на 1500 мА</p>
+                        <img src="./img/pg3/phone-stand.png" alt="celiane phone stage"/></div>
+                        <img class="charge__usb" src="./img/pg3/USB.png" alt="USB cabel"/>
+                    </div>
+        </div>
             </section>
+            <div class="catalog-note">
+                <p>Более подробную информацию о возможностях продукта, смотрите в каталоге Celiane - Соблазн перемен</p>
+            </div>
         </article>
-        <div class="clearFloat"></div>
+        <div class="contact__container">
         <div class="contact" id="id-contact">
             <h2 class="contact__head">Контакты</h2>
             <form class="contact__form" action="">
-                <input class="contact__form-text" type="text"/>
-                <input class="contact__form-mail" type="email"/>
-                <textarea class="contact__form-comment"></textarea>
+                <label class="contact__form-text" for="contact__form-text">Имя <br>
+                    <input  name='contact__form-text' type="text"/>
+                </label>
+                <label class="contact__form-mail"for="contact__form-mail"> E-mail <br>
+                    <input  name='contact__form-mail' type="email"/>
+                </label>
+                <label class='contact__form-comment' for="contact__form-comment"> Сообщение <br>
+                    <textarea class="contact__form-comment" name='contact__form-comment'></textarea>
+                </label>
                 <input class="contact__form-submit" type="submit"/>
             </form>
             <div class="contact__rec">
-                <svg class="contact__phone-svg"></svg>
-                <p class="contact__phone">+38 (050) 771-97-55</p>
-                <svg class="contact__email-svg"></svg>
-                <a class="contact__email" href="mailto:office@celiane.com.ua">office@celiane.com.ua</a></div>
+                
+                <p class="contact__text"><svg viewBox="0 0 40 40" x='0' y='0' class="contact__phone-svg">
+                    <use xlink:href='./img/svg/contact.svg#icon-phone'></use>
+                </svg><span class="contact__phone">+38 (050) 771-97-55</span></p>
+                <br>
+               
+                <p class="contact__text"> <svg class="contact__email-svg">
+                        <use viewBox="0 0 40 40" xlink:href='./img/svg/contact.svg#icon-mail'></use>
+                </svg><a tabindex="0" class="contact__email" href="mailto:office@celiane.com.ua">office@celiane.com.ua</a></p>
+                
+            </div>
         </div>
+        
+        
         </div>
+        <div class="download__container">
+            <div class="download" id="download">
+                <h2 class="download__head">Загрузки</h2>
+                <a class="download__link" href="#"><img class="download__img" src="./img/dw_catalog.png" alt="Catalog"><span class="download__text">Каталог Celiane - Соблазн перемен</span></a>
+                <a class="download__link" href="#"><img class="download__img" src="./img/dw_price.png" alt="Price"><span class="download__text">Обзорный прайс-лист Celiane</span></a>
+            </div>
+        </div>
+        
+    </div>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.js"></script>-->
