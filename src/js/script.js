@@ -9,6 +9,7 @@ $('document').ready(function(){
         $(this).stop().animate({
                 opacity: 'show',
                 left: "+=500"
+                //height: "toggle"
             }, 1500);
         });
     });
@@ -17,10 +18,7 @@ $('document').ready(function(){
         console.dir(e.target.src);
         $('body').addClass('modal--showe');
         console.log($('#imgPreview'));
-        var pashImgHq = String(e.target.src).substring(0, String(e.target.src).search(/\/\d.png/i))
-        +'/hq'+ String(e.target.src).substring( String(e.target.src).search(/\/\d.png/i), String(e.target.src).length);
-        console.log(pashImgHq);
-        $('#imgPreview')[0].src = pashImgHq;
+        $('#imgPreview')[0].src = e.target.src;
     });
     var scaleImg = 1;
     function closeModal() {
@@ -37,8 +35,8 @@ $('document').ready(function(){
         closeModal();
     });
     $('#imgPreview').on('click', function(e) {
-        if (scaleImg < 1.5) {
-            scaleImg += 0.1;
+        if (scaleImg < 2.5) {
+            scaleImg += 0.3;
         }
         $(this).css({
             transform: 'scale('+scaleImg+')',
