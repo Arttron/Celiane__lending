@@ -50,6 +50,10 @@ gulp.task('bundleHtml',['criticalCss'], function () {
         .pipe(gulp.dest('./public/'));
 });
 
+gulp.task('js', function () {
+    return gulp.src('./src/js/*.js')
+        .pipe(gulp.dest('./public/js'));
+});
 gulp.task('sass',['bundleHtml'], function () {
     var processors = [
         postcssCritical({
@@ -85,7 +89,9 @@ gulp.task('bs-reload', function (done) {
 });
 gulp.task('sass:watch', function () {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
+    gulp.watch('./src/js/*.js', ['js']);
+    gulp.watch('./src/*.html', ['sass']);
 	gulp.watch('./public/**/*', ['bs-reload']);
 });
 
-gulp.task('default', ['sass', 'sass:watch', 'browser-sync']);
+gulp.task('default', ['sass', 'js', 'sass:watch', 'browser-sync']);
